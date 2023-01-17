@@ -1,0 +1,44 @@
+.common {
+    font-family: Arial, 'Arial Black', Verdana, 'Trebuchet MS', Georgia, Tahoma, 'Courier New', 'Time New Roman';
+}
+
+.about-me {
+    color: cornflowerblue;
+}
+
+.drop-caps {
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+}
+
+.drop-caps:first-letter {
+    font-size: 150%;
+    text-shadow: 2px 2px 5px;
+    float: left;
+}
+
+p:first-letter {
+    font-size: 150%;
+}
+
+.description {
+    color: cornflowerblue;
+}
+
+.favourite-movie {
+    text-decoration: none;
+    color: red;
+}
+
+.favourite-movie:hover {
+    text-decoration: underline;
+}
+
+.fun-fatcs {
+    font-style: italic;
+}
+
+.parent-list {
+    color: yellowgreen;
+    font-weight: bold;
+}
