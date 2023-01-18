@@ -1,0 +1,64 @@
+body {
+    background-color: white;
+    color: #404040;
+    font-size: 11pt;
+    font-family: Georgia, Garamond, sans-serif;
+}
+
+a {
+    color: #A4A400;
+}
+
+.common {
+    color: #A4A400;
+    background-color: #F0F0F0;
+    background-repeat: repeat-x;
+    font-family: 'Lucida Sans Unicode', Helvetica, Arial, sans-serif;
+    text-decoration: underline;
+}
+
+.grandma {
+    text-align: center;
+    font-size: 22pt;
+    font-weight: bold;
+}
+
+.other-heading {
+    font-size: 18pt;
+}
+
+.last-para {
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+
+.abbreviations {
+    text-decoration: underline;
+}
+
+.delete {
+    text-decoration: line-through;
+}
+
+.user-comment {
+    padding-left: 20px;
+    font-style: italic;
+}
+
+.comment-item {
+    background-color: rgb(214, 214, 90);
+}
+
+.bottom {
+    color: #A4A400;
+}
+
+.copy-right {
+    font-family: monospace;
+    text-align: right;
+    width: fit-content;
+}
+
+.validate {
+    position: absolute;
+}
