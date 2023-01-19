@@ -68,36 +68,29 @@
 }
 
 @media screen and (max-width: 600px) {
-    #nav {
-        grid-area: n;
-        background-color: cornflowerblue;
-        line-height: 40px;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-    }
-
     #content {
         grid-area: c;
-        display: flex;
-        flex-direction: column;
+        display: grid;
     }
 
     .col-left {
         width: 100%;
         background-color:#aaa;
         height: 300px;
+        grid-area: 1/1/1/2;
     }
     
     .col-middle {
         width: 100%;
         background-color:#bbb;
         height: 300px;
+        grid-area: 2/1/2/3;
     }
     
     .col-right {
         width: 100%;
         background-color:#ccc;
         height: 300px;
+        grid-area: 1/2/1/3;
     }
 }
