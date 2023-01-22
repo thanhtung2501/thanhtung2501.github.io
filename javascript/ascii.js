@@ -17,9 +17,7 @@ function startAnimation() {
     document.getElementById('stop').disabled = false;
     document.getElementById('animation').disabled = true;
 
-    if (animationArr === undefined || animationArr.length === 0) {
-        animationArr = document.getElementById('text-area').value.split('=====\n');
-    }
+    animationArr = document.getElementById('text-area').value.split('=====\n');
     interval = updateInterval;
     interval();
 }
