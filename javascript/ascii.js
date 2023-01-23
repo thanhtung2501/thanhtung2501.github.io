@@ -18,7 +18,8 @@ function startAnimation() {
     document.getElementById('animation').disabled = true;
 
     animationArr = document.getElementById('text-area').value.split('=====\n');
-    interval = updateInterval();
+    interval = updateInterval;
+    interval();
 }
 
 function updateInterval() {
