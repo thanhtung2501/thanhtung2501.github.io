@@ -1,0 +1,135 @@
+.main {
+    font-size: 15pt;
+    margin: 5%;
+}
+
+.email, .pass {
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    margin: 10px 0px 10px 0px;
+    width: 100%;
+}
+
+.description {
+    opacity: 0.5;
+    margin-bottom: 20px;
+}
+
+.submit {
+    background-color: dodgerblue;
+    color: white;
+    font-size: 15pt;
+    height: 40px;
+    width: 100px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.form2-main {
+    font-size: 15pt;
+}
+
+.header {
+    background-color: dodgerblue;
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+
+.header-first-item {
+    float: left;
+    margin-right: 30px;
+}
+
+.header-item {
+    opacity: 0.8;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-left: 1px solid white;
+}
+
+.header-left {
+    float: right;
+}
+
+.sign-out {
+    height: 30px;
+    border-radius: 5px;
+}
+
+.common-btn {
+    padding: 0px;
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.common-btn.add-product {
+    border-color: lightskyblue;
+    color: lightskyblue;
+    margin-left: 20px;
+    width: 100px;
+}
+
+.common-btn.cancel {
+    border-color: orange;
+    color: orange;
+    margin-left: 20px;
+    width: 65px;
+}
+
+.common-btn.reset {
+    border-color: darkgreen;
+    color: darkgreen;
+    width: 65px;
+}
+
+.nav {
+    width: 90%;
+    margin: auto;
+    font-size: 20pt;
+    height: 50px;
+}
+
+.content {
+    width: 86%;
+    margin: auto;
+}
+
+.content-left {
+    width: 48%;
+    float: left;
+}
+
+.content-right {
+    width: 48%;
+    float: right;
+}
+
+.common-input {
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 99%;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.content-input {
+    height: 50px;
+}
+
+select.common-input {
+    height: 35px;
+    width: 100%;
+}
+
+.bottom {
+    text-align: right;
+}
+

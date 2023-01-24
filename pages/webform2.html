@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Web Form 2</title>
+        <link href="../css/webform1_2.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <form class="form2-main">
+            <div class="header">
+                <span class="header-first-item">
+                    MUM Golden Dome Market ::: SRM System
+                </span>
+                <span class="header-item">
+                    Products
+                </span>
+                <span class="header-item">
+                    Suppliers
+                </span>
+                <span class="header-left">
+                    <span>Hello!</span>
+                    <span class="sign-out">
+                        <input type="button" value="Sign Out" class="common-btn"/>
+                    </span>
+                </span>
+            </div>
+
+            <div class="nav">
+                New Product Form
+            </div>
+
+            <div class="content">
+                <div class="content-left">
+                    <div>Product Number</div>
+                    <div class="content-input">
+                        <input type="text" class="common-input" />
+                    </div>
+                    <div>Name</div>
+                    <div class="content-input">
+                        <input type="text" class="common-input" />
+                    </div>
+                    <div>Unit price</div>
+                    <div class="content-input">
+                        <input id="form2-price" placeholder="0.0" type="text" class="common-input" />
+                    </div>
+                </div>
+
+                <div class="content-right">
+                    <div>Quantity in stock</div>
+                    <div class="content-input">
+                        <input id="form2-quantity" placeholder="0" type="text" class="common-input" />
+                    </div>
+                    <div>Supplier</div>
+                    <div class="content-input">
+                        <select class="common-input">
+                            <option>Select a supplier</option>
+                            <option>Supplier A</option>
+                            <option>Supplier B</option>
+                        </select>
+                    </div>
+                    <div>Date supplied</div>
+                    <div class="content-input">
+                        <input type="text" class="common-input" placeholder="yyyy-mm-dd"/>
+                    </div>
+                    <div class="description">
+                        Enter a valid Date
+                    </div>
+
+                    <div class="bottom">
+                        <input class="common-btn reset" type="button" value="Reset" />
+                        <input class="common-btn cancel" type="button" value="Cancel" />
+                        <input class="common-btn add-product" type="button" value="Add Product" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>

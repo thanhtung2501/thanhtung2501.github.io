@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Web Form 1</title>
+        <link href="../css/webform1_2.css" rel="stylesheet" />
+        <script src="../javascript/webform1_2.js"></script>
+    </head>
+
+    <body>
+        <form action="" class="main" method="GET">
+            <div>Email address</div>
+            <div><input type="text" placeholder="Enter email" class="email" /></div>
+            <div class="description">We'll never share your email with anyone else</div>
+
+            <div>Password</div>
+            <div><input type="password" pattern='^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10}$' title="Password must be at least 10 characters in length and contain at least one number and one uppercase and lowercase letter" class="pass" placeholder="Password" /></div>
+
+            <div>
+                <input type="checkbox" /><span>Check me out</span>
+            </div>
+
+            <input type="submit" class="submit" value="Submit" />
+        </form>
+    </body>
+</html>
