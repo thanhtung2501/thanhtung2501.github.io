@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>W2D2 - Scope</title>
+        <script src="../javascript/scope.js"></script>
+    </head>
+
+    <body>
+        <h1>W2D2 Homework</h1>
+        <strong>1. What is the output is of the following JavaScript (without running it)</strong><br/>
+        <p>
+            1.&emsp;x = 1;<br>
+            2.&emsp;var a = 5;<br>
+            3.&emsp;var b = 10;<br>
+            4.&emsp;var c = function(a, b, c) {<br>
+            5.&emsp;&emsp;console.log(x); <strong>// undefined because of line 11</strong><br>
+            6.&emsp;&emsp;console.log(a); <strong>// 8</strong><br>
+            7.&emsp;&emsp;var f = function(a, b, c) {<br>
+            8.&emsp;&emsp;&emsp;b = a;<br>
+            9.&emsp;&emsp;&emsp;console.log(b); <strong>//8</strong><br>
+            10.&emsp;&emsp;&emsp;b = c;<br>
+            11.&emsp;&emsp;&emsp;var x = 5;<br>
+            12.&emsp;&emsp;}<br>
+            13.&emsp;&emsp;f(a, b, c);<br>
+            14.&emsp;&emsp;console.log(b); <strong>// 9</strong><br>
+            15.&emsp;&emsp;var x = 10;<br>
+            16.&emsp;}<br>
+            17.&emsp;c(8, 9, 10);<br>
+            18.&emsp;console.log(b); <strong>//10</strong><br>
+            19.&emsp;console.log(x); <strong>// 1</strong><br>
+        </p>
+        <br/><br/>
+
+        <strong>2. Define Global Scope and Local Scope in JavaScript</strong>
+        <p>
+            Variables declared outside a function, becomes GLOBAL.<br>
+            Variables declared within a JavaScript function, become LOCAL to the function.
+        </p>
+        <br/><br/>
+
+        <strong>3. Consider the following JavaScript code:</strong>
+        <p>
+            // Scope A<br>
+            function xFunc() {<br>
+                &emsp;// Scope B<br>
+                &emsp;function yFunc() {<br>
+                    &emsp;&emsp;// Scope C<br>
+                    &emsp;}<br>
+            }<br>
+            <br><br>
+                a. Do statements in Scope A have access to variables defined in Scope B and C? <strong>NO</strong><br>
+                b. Do statements in Scope B have access to variables defined in Scope A? <strong>YES</strong><br>
+                c. Do statements in Scope B have access to variables defined in Scope C? <strong>NO</strong><br>
+                d. Do statements in Scope C have access to variables defined in Scope A? <strong>YES</strong><br>
+                e. Do statements in Scope C have access to variables defined in Scope B? <strong>YES</strong><br>
+        </p>
+        <br><br>
+
+        <strong>4. What is the output is of the following JavaScript (without running it)</strong>
+        <p>
+            var foo = 1;<br>
+            function bar() {<br>
+                &emsp;if (!foo) {<br>
+                    &emsp;&emsp;var foo = 10;<br>
+                    &emsp;}<br>
+                    &emsp;alert(foo); <strong>// 10</strong><br>
+            }<br>
+            bar();<br>
+        </p>
+    </body>
+</html>
