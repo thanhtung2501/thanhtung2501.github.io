@@ -70,7 +70,7 @@ class Account {
      * @returns {string} representation of this account
      */
     toString() {
-        return "Account: " + this._number + ": balance " + this._balance;
+        return "Account: " + this._number + ", balance: " + this._balance;
     }
 
     /**

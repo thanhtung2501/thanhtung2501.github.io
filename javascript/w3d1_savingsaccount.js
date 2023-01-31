@@ -17,11 +17,11 @@ class SavingsAccount extends Account {
     }
 
     toString() {
-        return super.toString() + ' Interest: ' + this._interest;
+        return super.toString() + ", Interest " + this._interest;
     }
 
     endOfMonth() {
         this.addInterest();
-        return this.toString()
+        return this.toString();
     }
 }
