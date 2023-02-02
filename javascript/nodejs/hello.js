@@ -19,3 +19,17 @@ const question2 = (age) => {
     }
     readline.close();
 };
+
+// solution 2
+// const q1 = () => {
+//     readline.question('What is your name? ', (name) => {
+//         console.log(`Welcome ${name}`);
+//         q2();
+//     })
+// };
+
+// const q2 = () =>{
+//     readline.question('How old are you?\n', question2);
+// };
+
+// process.nextTick(q1);
