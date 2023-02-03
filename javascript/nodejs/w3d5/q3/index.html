@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab W3D5</title>
+    <script>
+        function getStylesheet() {
+          const currentTime = new Date().getHours();
+          if (currentTime > 18 || currentTime < 6) {
+            document.write("<link rel='stylesheet' href='night.css' type='text/css'>");
+          }
+          else{
+            document.write("<link rel='stylesheet' href='day.css' type='text/css'>");
+          }
+        }
+        getStylesheet();
+      </script>
+</head>
+<body>
+<h3>W3D5 - P3</h3>
+<form action="/result" method="post">
+    <label>Name <input type="text" name="name">
+    </label>
+    <label>Age <input type="text" name="age">
+    </label>
+    <input type="submit" name="Submit Query">
+</form>
+</body>
+</html>
