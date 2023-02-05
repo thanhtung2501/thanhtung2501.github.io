@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <table>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <% for (const item of products) {%>
+                <tr>
+                    <td><%=item.getName()%></td>
+                    <td><%=item.getPrice()%></td>
+                    <td><%=item.getQuantity()%></td>
+                </tr>
+            <%}%>
+        </table>
+    </body>
+</html>

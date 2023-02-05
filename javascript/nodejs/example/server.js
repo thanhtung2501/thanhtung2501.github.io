@@ -11,6 +11,12 @@ app.use(bodyparser.urlencoded({
 
 app.use(express.json());
 
+app.use('/pics', express.static(path.join(__dirname, "public", "/images")));
+app.use('/css', express.static(path.join(__dirname, "public", "style")));
+
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'public', 'view'));
+
 // get route from other files
 app.use('/book', bookRoutes);
 
@@ -27,13 +33,13 @@ app.use('/book', bookRoutes);
     
 // })
 
-// app.get('/dog', (req, res) => {
-//     res.send('Dog page');
-    
-// })
+app.get('/dog', (req, res) => {
+    res.send('Dog page');
+})
 
 app.get('/chicken', (req, res) => {
-    res.send('Chicken page');
+    let item = 'this is the page 1';
+    res.render('page1', {title: item});
 })
 
 app.listen(3000, () => {
