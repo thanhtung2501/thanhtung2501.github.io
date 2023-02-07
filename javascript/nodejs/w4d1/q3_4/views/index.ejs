@@ -12,13 +12,13 @@
                     <th>Price</th>
                     <th>Quantity</th>
                 </tr>
-                <%for (const p of products) {%>
+                <%for (const p in products) {%>
                     <tr>
-                        <td><input type="text" readonly name="name" value="<%=p.getName()%>"/></td>
-                        <td><input type="text" readonly name="price" value="<%=p.getPrice()%>"/></td>
-                        <td><input type="text" name="quantity" value=""/></td>
+                        <td><input type="text" readonly name="name" value="<%=products[p].getName()%>"/></td>
+                        <td><input type="text" readonly name="price" value="<%=products[p].getPrice()%>"/></td>
+                        <td><input type="text" readonly name="quantity" value="<%=products[p].getQuantity()%>"/></td>
                         <td>
-                            <input type="submit" value="Add To Cart"/>
+                            <a href="/product?index=<%=p%>">Add To Cart</a>
                         </td>
                     </tr>
                 <%}%>

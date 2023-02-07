@@ -21,8 +21,9 @@ class Product {
         this._quantity = quantity;
     }
 
-    addQuantity(quantity) {
-        return this._quantity + quantity;
+    addQuantity() {
+        this._quantity += 1;
+        // return this._quantity + quantity;
     }
 
     calPrice() {

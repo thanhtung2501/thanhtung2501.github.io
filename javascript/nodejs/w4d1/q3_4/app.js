@@ -9,7 +9,9 @@ const app = express();
 app.use(express.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'style')));
 app.use(session({
-    secret: 'my secret'
+    secret: 'my secret',
+    resave: false,
+    saveUninitialized: true
 }));
 
 app.set('view engine', 'ejs');
@@ -21,12 +23,10 @@ app.get('/', (req, res) => {
     });
 });
 
-app.post('/addToCart', (req, res) => {
-    let name = req.body.name;
-    let price = req.body.price;
-    let quantity = req.body.quantity;
-
-    let product = new Product(name, parseInt(price), parseInt(quantity));
+app.get('/product', (req, res) => {
+    let index = parseInt(req.query.index);
+    let productItem = products[index];
+    let product = new Product(productItem.getName(), productItem.getPrice(), parseInt(productItem.getQuantity()));
 
     let productCart = [];
 
@@ -34,21 +34,38 @@ app.post('/addToCart', (req, res) => {
         productCart = req.session.products
     }
 
-    for (let i = 0; i < productCart.length; i++) {
-        let p = productCart[i];
-        if (p.getName() === product.getName()) {
-            product.setQuantity(product.addQuantity(parseInt(quantity)));
+    console.log(product);
+    if (productCart.length === 0) {
+        productCart.push(product);
+    } else {
+        for (let i = 0; i < productCart.length; i++) {
+            let p = productCart[i];
+            if (isExist(productCart, product)) {
+                product.addQuantity(parseInt(product.getQuantity()));
+                productCart[i] = product;
+            } else {
+                productCart.push(product);
+            }
         }
     }
-    console.log(product);
-    productCart.push(product);
-
-    console.log(productCart);
 
     req.session.products = productCart;
 
-    res.redirect('/cart');
+    res.render('cart', {
+        products: productCart
+    });
 });
+
+function isExist(productCart, product) {
+    for (let i = 0; i < productCart.length; i++) {
+        let p = productCart[i];
+        if (p._name === product.getName()) {
+            return true;
+        }
+    }
+
+    return false;
+}
 
 app.get('/cart', (req, res) => {
     res.render('cart', {
