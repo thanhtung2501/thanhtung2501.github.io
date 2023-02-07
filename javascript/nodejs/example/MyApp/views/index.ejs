@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <form action="/cart" method="post">
+      <% for (const item of products) {%>
+        <a href="/details?name=<%=item.getName()%>">
+          <div name="product">
+            <span><%=item.getName()%></span>
+            <span><%=item.getPrice()%></span>
+            <span><%=item.getDescription()%></span>
+            <span><input type="submit" value="Add to Cart"/></span>
+          </div>
+        </a> 
+      <%}%>
+    </form>
+  </body>
+</html>
