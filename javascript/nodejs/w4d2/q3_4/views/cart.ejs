@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <h1>My cart</h1>
+        <table>
+            <%for (const p of products) {%>
+            <tr>
+                <td><%=p._name%></td>
+                <td><%=p._price%></td>
+                <td><%=p._quantity%></td>
+            </tr>
+            <%}%>
+        </table>
+    </body>
+</html>
